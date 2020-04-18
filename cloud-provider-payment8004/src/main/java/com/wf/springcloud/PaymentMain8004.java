@@ -11,8 +11,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ZookeeperMain8004 {
+public class PaymentMain8004 {
     public static void main(String[] args) {
-        SpringApplication.run(ZookeeperMain8004.class, args);
+        SpringApplication.run(PaymentMain8004.class, args);
     }
 }
