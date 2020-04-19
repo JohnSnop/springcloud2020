@@ -1,0 +1,31 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-service
+#  jackson:
+#    date-format: java.text.SimpleDateFormat
+#    time-zone: GMT+8
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+  instance:
+    instance-id: order-feign80
+    prefer-ip-address: true
+
+ribbon:
+  # 建立链接所需要的超时时间，单位毫秒
+  # 这里注意大小写的问题 readTimeout: 5000 不行
+  ReadTimeout: 5000
+  # 链接超时的最大时间，单位毫秒
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    # feign以什么日志级别监控那个接口
+    com.wf.springcloud.service.PaymentFeignService: debug
