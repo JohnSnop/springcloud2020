@@ -1,0 +1,24 @@
+server:
+  port: 9022
+
+spring:
+  application:
+    name: zuul-gateway-service
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: zuul-gateway9022
+
+zuul:
+  routes:
+    hystrix8001:
+      serviceId: cloud-provider-hystrix-payment
+      path: /hystrix-payment/**
+  ignored-services: cloud-provider-hystrix-payment
+  prefix: /wf
