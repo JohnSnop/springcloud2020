@@ -1,0 +1,28 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center   #注册进eureka注册中心的服务名称
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:JohnSnop/springcloud-config2020.git   #github的仓库地址
+          # 搜索目录
+          search-paths:
+            - springcloud-config2020
+      # 读取的git分支
+      label: master
+
+
+#注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: config-center3344
+    prefer-ip-address: true
+
