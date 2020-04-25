@@ -31,6 +31,11 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return "Hello,Zipkin";
+    }
+
     @PostMapping("/payment/create")
     public CommonResult<Payment> insert(@RequestBody Payment payment) {
         int insert = paymentService.insert(payment);
