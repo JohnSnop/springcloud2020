@@ -16,7 +16,7 @@ spring:
                 host: localhost
                 port: 5672
                 username: guest
-                password: guest
+                password: WFXSWL/arPelu3RraGpLajAyK4QB8k9rJQNzHnUcwIKvCJC5AUH10y0XtZDyiysq2tUTL8XSWL
       bindings:
         input: #通道的名称
           destination: studyExchange  #表示使用exchange名称定义
@@ -35,4 +35,9 @@ eureka:
     instance-id: receive-8803.com
     prefer-ip-address: true #显示服务的ip地址
 
-
+jasypt:
+  encryptor:
+    bean: wfEncryptorBean
+    property:
+      prefix: WFXSWL
+      suffix: XSWL
