@@ -32,6 +32,9 @@ public class EncryptorTest {
         String mysqlOriginPswd = environment.getProperty("spring.datasource.password");
         String mysqlEncryptedPswd = encrypt(mysqlOriginPswd);
         System.out.println("MySQL原始明文密码加密后的结果为：" + mysqlEncryptedPswd);
+
+        String decrypt = decrypt(mysqlEncryptedPswd);
+        System.out.println("MySQL原始明文密码为：" + decrypt);
     }
 
     private String encrypt(String originPassord) {
