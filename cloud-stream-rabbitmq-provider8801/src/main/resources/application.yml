@@ -16,7 +16,7 @@ spring:
                 host: localhost
                 port: 5672
                 username: guest
-                password: WFXSWL/arPelu3RraGpLajAyK4QB8k9rJQNzHnUcwIKvCJC5AUH10y0XtZDyiysq2tUTL8XSWL
+                password: WFXSWLWmkYEhsfhDksfoTzRxphQeqAqd3rxAMJUF3n9mOOuhhBcoW/sCVhN3qpcGlwlC8ZXSWL
       bindings:
         output: #通道的名称
           destination: studyExchange  #表示使用exchange名称定义
